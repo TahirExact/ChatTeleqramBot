@@ -19,7 +19,7 @@ threading.Thread(target=run_flask).start()
 
 # --- Telegram bot ---
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_GROUP_ID = -5071978432   # replace with your admin group ID
+ADMIN_GROUP_ID = -5024743724   # replace with your admin group ID
 
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN missing")
@@ -61,5 +61,6 @@ while True:
         bot.polling(none_stop=True)
     except Exception as e:
         print("⚠️ Polling error:", e)
+
 
 
