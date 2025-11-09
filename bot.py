@@ -55,5 +55,11 @@ def handle_admin_reply(message):
     user_id = user_map[replied.message_id]
     bot.send_message(user_id, f"👨‍💼 Admin: {message.text}")
 
-print("✅ Bot started with keep-alive web server.")
-bot.polling(none_stop=True)
+while True:
+    try:
+        print("🔄 Starting bot polling...")
+        bot.polling(none_stop=True)
+    except Exception as e:
+        print("⚠️ Polling error:", e)
+
+
